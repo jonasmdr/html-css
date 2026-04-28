@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grouping Tags</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: beige;
+        }
+
+        header {
+            background-color: rgba(209, 153, 216, 0.678);
+            padding: 10px;
+            margin: 0px;
+            border-radius: 10px;
+        }
+
+        nav {
+            background-color: antiquewhite;
+            padding: 3px;
+            border-radius: 10px;
+            box-shadow: 5px 6px 5px 3px rgba(0, 0, 0, 0.253);
+        }
+
+        nav > a {
+            text-decoration: none;
+            color: rgb(224, 138, 138);
+            font-weight: bold;
+            margin-right: 5px;
+        }
+
+        nav > a:hover {
+            color: black;
+            text-decoration: underline;
+        }
+
+        main {
+            background-color: rgba(238, 168, 220, 0.582);
+            padding: 10px;
+            margin: 10px;
+            border-radius: 20px 0px;
+            box-shadow: 5px 5px 5px 3px rgba(0, 0, 0, 0.274);
+        }
+
+        article {
+            background-color: rgb(255, 131, 193);
+            border-radius: 10px;
+        }
+
+        article > aside {
+            background-color: rgb(167, 104, 135);
+            border-radius: 10px;
+        }
+
+        footer {
+            background-color: rgba(165, 114, 150, 0.521);
+            color: rgb(108, 68, 116);
+            text-align: center;
+            padding: 4px;
+            margin: 0px;
+            border-radius: 10px;
+        }
+
+        footer > p {
+            margin: 0px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Meu site</h1>
+        <nav>
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+        </nav>
+    </header>
+    <main>
+        <section id="assuntos">
+
+        </section>
+        <section id="noticias">
+            <article>
+                <aside>
+                    <h2>Noticias de fulano poeta</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, beatae mollitia natus, voluptas, recusandae sapiente enim rerum ad aliquam quibusdam amet consectetur reprehenderit modi neque autem distinctio suscipit tempora qui.</p>
+                    <p>Artigo escrito por fulano</p>
+                </aside>
+            </article>
+            <article>
+
+            </article>
+        </section>
+    </main>
+    <footer>
+        <p>Desenvolvido pelo aluno</p>
+    </footer>
+</body>
+</html>

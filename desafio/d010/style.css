@@ -1,0 +1,70 @@
+@font-face {
+    font-family: 'idroid';
+    src: url(./fontes/idroid.otf);
+}
+
+body {
+    background-color: rgb(125, 219, 188);
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-image: linear-gradient(to top, rgb(0, 102, 0), rgb(107, 206, 107));
+
+}
+
+header > h1 {
+    color: white;
+    text-shadow: 5px 5px 15px gray;
+    text-align: center;
+    }
+
+header > p {
+    color: white;
+    text-align: center;
+}
+
+header > nav {
+
+}
+
+nav > a:hover {
+    background-color: rgba(255, 255, 255, 0.514);
+    border-radius: 5px;
+}
+
+nav > a {
+    display: inline-block;
+    padding: 5px;
+    color: white;
+    text-decoration: none;
+
+}
+
+main {
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 5px 5px 15px gray;
+    width: 1000px;
+    padding: 15px;
+    margin: auto;
+}
+
+main > p {
+    text-align: justify;
+    text-indent: 30px;
+}
+
+h1, h2 {
+    font-family: idroid;
+}
+
+main > h1 {
+    color: green;
+}
+
+h2 {
+    background-color: aquamarine;
+    color: green;
+}
