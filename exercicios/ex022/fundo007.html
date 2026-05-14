@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alinhamento vertical</title>
+    <style>
+        #container {
+            background-image: url('imagens/target001.png');
+            background-size: 100% 100%;
+            position: relative;
+            /* position: relative;: Essa é a regra de ouro! Ao colocar isso, o container avisa: "Atenção! Qualquer caixa 'filha' dentro de mim que quiser flutuar livremente, deve usar as minhas bordas como limite, e não as bordas da página inteira." */
+            height: 96vh;
+            padding: 10px;
+            background-color: rgb(158, 126, 187);
+        }
+
+        #conteudo {
+            background-image: url('imagens/target001.png');
+            background-size: 100% 100%;
+            position: absolute;
+            /*
+            position: absolute;: Isso tira a caixa do fluxo normal da página e diz: "Vou me posicionar livremente, me guiando pelo primeiro elemento pai que seja 'relative'" (que é o nosso container). */
+            height: 200px;
+            width: 400px;
+            background-color: rgb(165, 165, 99);
+            left: 50%;
+            top: 50%;
+            /* left: 50%; e top: 50%;: Isso empurra a caixa para a metade da largura (esquerda) e metade da altura (topo) do container.
+            O Problema: Isso não centraliza a caixa perfeitamente. Isso coloca a quina superior esquerda da caixa bem no meio do container. A caixa em si acaba ficando deslocada para a direita e para baixo. */
+            transform: translate(-50%, -50%);
+            /*
+            transform: translate(-50%, -50%);: Aqui está a mágica! Esse comando olha para o tamanho da própria caixa menor (os 400px de largura e 200px de altura) e a puxa de volta: 50% do próprio tamanho para a esquerda (-50%) e 50% do próprio tamanho para cima (-50%).
+            Ao fazer esse ajuste final com o transform, o "umbigo" (o centro exato) da caixa #conteudo se alinha perfeitamente com o centro exato do #container. É uma fórmula muito elegante para garantir que algo fique no meio da tela, não importa o tamanho do monitor de quem estiver acessando o seu projeto!
+     */
+        }
+    </style>
+</head>
+<body>
+    <section id="container">
+        <article id="conteudo">
+
+        </article>
+    </section>
+</body>
+</html>
