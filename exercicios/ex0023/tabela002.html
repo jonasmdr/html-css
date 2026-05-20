@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabelas</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        table {
+            width: 800px;
+            border-collapse: collapse;
+        }
+
+        caption {
+            font-size: 1.5em;
+            font-weight: bold;
+            padding: 20px;
+            background-color: lightgray;
+        }
+
+        td, th {
+            border: 1px solid black;
+            padding: 8px;
+        }
+
+        thead, tfoot {
+            background-color: rgb(161, 161, 161);
+            color: white;
+        }
+
+        td.num {
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+    <h1>Uso de tabelas grandes</h1>
+    <!--
+        ANATOMIA PARA TABELAS GRANDES
+        TABLE
+            CAPTION
+            THEAD
+                TR,TD, TH
+            TBODY
+                TR,TD, TH
+            TFOOT
+                TR,TD, TH
+    -->
+    <table>
+        <caption>Populaçao das Unidades Federativas</caption>
+        <thead>
+            <tr>
+                <th scope="col">Pisiçao</th> <!-- O SCOPE="COL" O valor col (abreviação de column) indica que aquele <th> é o cabeçalho de uma coluna inteira. Tudo o que estiver diretamente abaixo dele pertence a essa categoria.-->
+                <th scope="col">Unidaade federativa</th>
+                <th scope="col">Populaçao</th>                
+                <th scope="col">% da pop. total</th>                
+                <th scope="col">Paises comparativos</th>                    
+            </tr>
+        </thead>
+
+        <tbody>
+                <tr>
+                    <td>São Paulo</td>
+                    <td class="num">46 081 801</td>
+                    <td class="num">44 411 238	</td>
+                    <td class="num">7,63%</td>
+                    <td class="num">Argentina (45 851 378)</td>
+                </tr>  
+
+                <tr>
+                    <td>Minas Gerais</td>
+                    <td class="num">21 393 441</td>
+                    <td class="num">20 539 989</td>
+                    <td class="num">4,81%</td>
+                    <td class="num">Chade (21 003 705)</td>
+                </tr>   
+
+                <tr>
+                    <td>Rio de Janeiro</td>
+                    <td class="num">17 223 547</td>
+                    <td class="num">16 055 174</td>
+                    <td class="num">0,41%</td>
+                    <td class="num">Zimbabwe (16 950 795)</td>
+                </tr>          
+        </tbody>
+
+        <tfoot>
+            <tr>
+                <th scope="row">Total de habitantes</th> <!-- scope="row" O valor row indica que o <th> é o cabeçalho de uma linha inteira. Todos os dados que estiverem à direita dele, na mesma linha, pertencem a ele.-->
+                <td>0000</td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+</html>
