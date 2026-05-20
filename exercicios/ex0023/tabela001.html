@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabelas</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        table {
+            width: 400px; /* Define que a tabela terá uma largura fixa de exatos 400 pixels na tela. */
+            height: 400px;
+            border-collapse: collapse; /* (Colapso de Borda): Junta as bordas da tabela. Por padrão, o HTML deixa um pequeno espaço entre a borda da tabela e a borda de cada célula dentro dela (criando um efeito de "borda dupla"). O comando collapse elimina esse espaço, fundindo todas as linhas em uma borda única e contínua, o que deixa o visual muito mais limpo e moderno. */
+        }
+
+        td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: center; /* Alinhamento horizontal */
+            vertical-align: middle; /* Alinhamento vertical */
+        }
+        
+
+    </style>
+</head>
+<body>
+    <h1>Minha primeira tabela</h1>
+    <!--
+        HIERARQUIA DE TABELAS (SIMPLES)
+        TABLE = TABELA
+            TABLE ROW = LINHA DE TABELA
+                TABLE HEADER = CABEÇALHO DE TABELA
+                TABLE DATA = DADO DE TABELA
+-->
+    <table>
+        <tr> <!-- tr SAO AS LINHAS DA TABELA -->
+            <td>A1</td> <!-- td SAO OS DADOS NESSAS LINHAS -->
+            <td>B1</td>                
+            <td>C1</td>            
+        </tr>
+
+        <tr>
+            <td>A2</td>            
+            <td>B2</td>            
+            <td>C2</td>                
+        </tr>
+
+        <tr>
+            <td>A3</td>
+            <td>B3</td>
+            <td>C3</td>    
+        </tr>
+
+        <tr>
+            <td>A4</td>            
+            <td>B4</td>            
+            <td>C4</td>                
+        </tr>
+    </table>
+</body>
+</html>
