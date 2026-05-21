@@ -11,6 +11,7 @@
         table {
             width: 800px;
             border-collapse: collapse;
+            position: relative; /* necessario para configuraçao de mexer o topo da tabela */
         }
 
         caption {
@@ -20,15 +21,33 @@
             background-color: lightgray;
         }
 
+        thead, tfoot {
+            background-color: rgb(161, 161, 161);
+            color: white;
+        }
+
+        thead >tr > th {
+            position: sticky;
+            top: 0;
+            background-color: rgb(161, 161, 161);
+            /* position: sticky;: É o comportamento "grudento". Ele funciona como um híbrido: o elemento age como um bloco normal da página até você rolar a tela. Quando ele atinge o limite definido, ele trava.
+
+            top: 0;: Este é o "gatilho". Você está dizendo ao navegador: "Quando o topo deste elemento encostar exatamente no topo da tela (0 pixels de distância), grude ele aí e não deixe subir mais".
+
+            background-color: rgb(161, 161, 161);: Pinta o fundo de cinza. Isso é obrigatório para um bom efeito sticky. Se o elemento fosse transparente, os dados da tabela passariam por trás dele durante a rolagem, as letras se misturariam e viraria uma bagunça visual impossível de ler. */
+        }
+  
+        tbody > tr:nth-child(2n) {
+            background-color: lightgray;
+        }              /* :nth-child() é uma das ferramentas mais inteligentes do CSS. A expressão "nth-child" pode ser traduzida como "enésimo filho" — ou seja, ele permite que você selecione elementos baseados na posição exata que eles ocupam dentro do elemento pai.
+                Quando você escreve 2n, está dizendo para o navegador fazer uma conta de multiplicação (2 vezes n). 
+                Pode usar também nth-child(odd) ou (even) que significa impar e par*/
+
         td, th {
             border: 1px solid black;
             padding: 8px;
         }
 
-        thead, tfoot {
-            background-color: rgb(161, 161, 161);
-            color: white;
-        }
 
         td.num {
             text-align: right;
