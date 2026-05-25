@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabelas</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        table {
+            width: 800px;
+            border-collapse: collapse;
+            position: relative; /* necessario para configuraçao de mexer o topo da tabela */
+        }
+
+        caption {
+            font-size: 1.5em;
+            font-weight: bold;
+            padding: 20px;
+            background-color: lightgray;
+        }
+
+        thead, tfoot {
+            background-color: rgb(161, 161, 161);
+            color: white;
+        }
+
+        thead >tr > th {
+            position: sticky;
+            top: 0;
+            background-color: rgb(161, 161, 161);
+            /* position: sticky;: É o comportamento "grudento". Ele funciona como um híbrido: o elemento age como um bloco normal da página até você rolar a tela. Quando ele atinge o limite definido, ele trava.
+
+            top: 0;: Este é o "gatilho". Você está dizendo ao navegador: "Quando o topo deste elemento encostar exatamente no topo da tela (0 pixels de distância), grude ele aí e não deixe subir mais".
+
+            background-color: rgb(161, 161, 161);: Pinta o fundo de cinza. Isso é obrigatório para um bom efeito sticky. Se o elemento fosse transparente, os dados da tabela passariam por trás dele durante a rolagem, as letras se misturariam e viraria uma bagunça visual impossível de ler. */
+        }
+  
+        tbody > tr:nth-child(2n) {
+            background-color: lightgray;
+        }              /* :nth-child() é uma das ferramentas mais inteligentes do CSS. A expressão "nth-child" pode ser traduzida como "enésimo filho" — ou seja, ele permite que você selecione elementos baseados na posição exata que eles ocupam dentro do elemento pai.
+                Quando você escreve 2n, está dizendo para o navegador fazer uma conta de multiplicação (2 vezes n). 
+                Pode usar também nth-child(odd) ou (even) que significa impar e par*/
+
+        td, th {
+            border: 1px solid black;
+            padding: 8px;
+        }
+
+
+        td.num {
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+    <h1>Uso de tabelas grandes</h1>
+    <!--
+        ANATOMIA PARA TABELAS GRANDES
+        TABLE
+            CAPTION
+            THEAD
+                TR,TD, TH
+            TBODY
+                TR,TD, TH
+            TFOOT
+                TR,TD, TH
+    -->
+    <table>
+        <caption>Populaçao das Unidades Federativas</caption>
+        <thead>
+            <tr>
+                <th scope="col">Pisiçao</th> <!-- O SCOPE="COL" O valor col (abreviação de column) indica que aquele <th> é o cabeçalho de uma coluna inteira. Tudo o que estiver diretamente abaixo dele pertence a essa categoria.-->
+                <th scope="col">Unidaade federativa</th>
+                <th scope="col">Populaçao</th>                
+                <th scope="col">% da pop. total</th>                
+                <th scope="col">Paises comparativos</th>                    
+            </tr>
+        </thead>
+
+        <tbody>
+                <tr>
+                    <td>São Paulo</td>
+                    <td class="num">46 081 801</td>
+                    <td class="num">44 411 238	</td>
+                    <td class="num">7,63%</td>
+                    <td class="num">Argentina (45 851 378)</td>
+                </tr>  
+
+                <tr>
+                    <td>Minas Gerais</td>
+                    <td class="num">21 393 441</td>
+                    <td class="num">20 539 989</td>
+                    <td class="num">4,81%</td>
+                    <td class="num">Chade (21 003 705)</td>
+                </tr>   
+
+                <tr>
+                    <td>Rio de Janeiro</td>
+                    <td class="num">17 223 547</td>
+                    <td class="num">16 055 174</td>
+                    <td class="num">0,41%</td>
+                    <td class="num">Zimbabwe (16 950 795)</td>
+                </tr>          
+        </tbody>
+
+        <tfoot>
+            <tr>
+                <th scope="row">Total de habitantes</th> <!-- scope="row" O valor row indica que o <th> é o cabeçalho de uma linha inteira. Todos os dados que estiverem à direita dele, na mesma linha, pertencem a ele.-->
+                <td>0000</td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+</html>
+
+<!--
+O colgroup serve exclusivamente para agrupar e estilizar colunas (na vertical).
+-->
