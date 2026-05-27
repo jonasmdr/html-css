@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iframes</title>
+</head>
+<body>
+    <h1>Meu site principal</h1>
+
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo accusantium sequi consectetur totam qui vero voluptatum sit, earum quam modi expedita, quae quis quia ab corrupti illo. Iusto, asperiores iure.</p>
+
+    <!-- Uma forma de deixar mais seguro o iframe quando se usa site de terceiros, seria usar sandbox="sandbox" para nao permitir que se cadastre nesse site de terceiro. também tem como tá definindo no sandbox algumas coisa que quer permitir. ex.: allow-same-origin allow-forms allow-scripts que vai permitir alguns contéudo que sao o mesmo do seu site | referrerpolicy="no-referrer" diz que o contéudo que está no iframe nao vai coletar nenhum tipo de informaçao do usuario -->
+    <iframe src="pagextra/pag004.html" sandbox="sandbox" referrerpolicy="no-referrer" frameborder="0">
+        Seu navegador nao é compativel
+    </iframe>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam libero et ullam ut odit sit dolor! Autem dicta dignissimos quae ratione, a inventore aperiam libero nisi aspernatur debitis quod. Quidem. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus totam officia pariatur eos aspernatur, nesciunt dolorem veniam itaque odit, enim eveniet illo beatae. Totam aliquam suscipit perferendis sint rem quaerat.</p>
+
+    <a href="pagextra/pag005.html">Pag 5</a>
+</body>
+</html>
