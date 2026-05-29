@@ -12,7 +12,31 @@
 </head>
 <body>
     <h1>Meu primeiro formulário</h1>
-    <form action="cadastro.php">
+    <!--
+    O Método GET (<form method="GET">)
+Quando você usa o método GET, os dados que o usuário digita no formulário são anexados diretamente na URL (o endereço do site) após um ponto de interrogação ?.
+
+Como fica a URL: [seusite.com/busca?termo=html&categoria=iniciante](https://seusite.com/busca?termo=html&categoria=iniciante)
+
+Visibilidade: Qualquer pessoa olhando para a tela consegue ver os dados na barra de endereços.
+
+Quando usar: É ideal para ações de leitura ou busca. Por exemplo, quando você pesquisa um vídeo no YouTube ou filtra produtos em uma loja. Como a URL muda, o usuário pode favoritar aquela página ou enviar o link para um amigo, e a pesquisa vai abrir exatamente igual.
+
+Limitações: Como as URLs têm um limite de tamanho (geralmente em torno de 2000 caracteres), você não pode enviar textos muito longos ou arquivos usando GET. Nunca use GET para senhas ou dados sensíveis.
+
+O Método POST (<form method="POST">)
+Quando você usa o método POST, os dados do formulário são enviados escondidos dentro do corpo (payload) da requisição HTTP, e não na URL.
+
+Como fica a URL: [seusite.com/login](https://seusite.com/login) (Limpa, sem mostrar as informações).
+
+Visibilidade: Os dados não ficam visíveis na barra de endereços do navegador.
+
+Quando usar: É o padrão para ações que criam ou alteram algo no servidor. Formulários de login, páginas de cadastro, envio de textos longos e upload de imagens precisam usar POST.
+
+Vantagens: É mais seguro para dados sensíveis (embora ainda precise de HTTPS/SSL para ser realmente seguro contra interceptações) e não tem limite prático de tamanho para os dados enviados.
+    -->
+    <form method="get" action="cadastro.php">
+        <!-- LABEL é usado para criar uma relação entre o nome no formulario e a caixa que precisa preencher -->
         <p><label for="inome">Nome:</label> <input type="text" name="nome" id="inome"></p>
         <p><label for="isobrenome">Sobrenome:</label> <input type="text" name="sobrenome" id="isobrenome"></p>
         <p><input type="submit" value="Enviar"></p>
