@@ -5,8 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Media Query</title>
     <link rel="stylesheet" href="estilos/style.css" media="all">
-    <link rel="stylesheet" href="estilos/retrato.css" media="screen and (orientation: portrait)">
-    <link rel="stylesheet" href="estilos/paisagem.css" media="screen and (orientation: landscape)">
+    <link rel="stylesheet" href="estilos/retrato.css" media="screen and (orientation: portrait)"> <!-- 1. Media Type (O tipo de aparelho)
+Responde à pergunta: "Onde este site está sendo exibido?"
+
+Você usa o tipo para separar as regras de uma tela de computador/celular das regras de uma folha de papel (quando alguém vai imprimir o site). Os principais são:
+
+screen: Telas em geral (monitores, notebooks, celulares).
+
+print: Modo de impressão.
+
+all: Todos os tipos (é o padrão se você não digitar nada). -->
+    <link rel="stylesheet" href="estilos/paisagem.css" media="screen and (orientation: landscape)"> <!-- 2. Media Feature (A característica do aparelho)
+Responde à pergunta: "Qual é a condição dessa tela agora?"
+
+Aqui você especifica o tamanho ou o estado da tela. As mais usadas para organizar o layout (HTML/CSS) são:
+
+max-width: A tela tem no máximo essa largura? (Ótimo para estilizar celulares).
+
+min-width: A tela tem pelo menos essa largura? (Ótimo para estilizar monitores maiores).
+
+orientation: O aparelho está deitado (landscape) ou em pé (portrait)? -->
 </head>
 <body>
     <h1>Mude a orientaçao do seu dispositivo</h1>
