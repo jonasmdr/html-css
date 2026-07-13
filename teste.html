@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+        }
+
+        body, html {
+            background-color: lightgray;
+            box-sizing: border-box;
+            width: 100%;
+            height: auto;
+
+            display: flex;
+            flex-flow: column nowrap;
+
+            align-items: center;
+
+
+        }
+
+        .header, .main, .footer {
+            width: 100%;
+            height: auto;
+            display: flex;
+            background: lightblue;
+            background-size: cover;
+            flex-flow: column nowrap;
+            align-items: center;
+        }
+
+        figure {
+            width: 100%;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+            display: block;
+            margin-bottom: 40px;
+        }
+
+        @media screen and (min-width: 775px) {
+
+            body {
+                max-width: 736px;
+                display: flex;
+                flex-flow: column nowrap;
+                align-items: center;
+                padding: 1em;
+                margin: 128px auto;
+                background-color: salmon;
+            }
+ 
+        }
+
+
+    </style>
+</head>
+<body>
+    <figure>
+        <img src="desafio/d010  - guiadp/imagens/irina-blok.jpg" alt="">
+    </figure>
+    <div class="header">
+        <div>A
+            <div>B
+                <div>C
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="main">
+        <div>D
+            <div>F
+                <div>G
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div>H
+            <div>I
+                <div>J
+        
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
